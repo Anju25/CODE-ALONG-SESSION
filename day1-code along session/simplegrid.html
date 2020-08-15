@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simplegrid</title>
+    <style>
+        .gird-container{
+            display:grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-columns:repeat(2,1fr,2fr); /*first column takes 1fr and second takes 2fr and 3rd takes 1fr and 4th takes 2fr and so on*/
+            grid-template-columns:repeat(4,1fr);/*how many times we wann repat and what we wana repeat*/
+            grid-row-gap:1em;
+            grid-column-gap:1em;
+            grid-gap:1em;   /* this for both column and row  */
+        grid-template-rows:50vh 50vh ; /* vh is nothing but screen size which occupies 50 percent of screen */
+        grid-auto-rows:10px ;  /*it is used for specifying the row height*/
+        
+        grid-auto-rows:minmax(100px,auto) ;/*it avoids the content  overflow min is 100px and max is auto*/
+               justify-items:start;
+               align-items:center;
+               }
+
+               #div1{
+                   align-self:center; /* it is along the vertical direction */
+                   justify-self:center; /*  it is along the horizontal direction*/
+               }
+        .grid-container >div{
+            padding:1em;
+            background-color: grey;
+
+
+        }
+        .gird-container>div:nth-child(even)
+        {
+         background-color: lightgrey;   
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div id="div1">Lorem   1</div>
+        <div>Lorem   2</div>
+        <div>Lorem   3</div>
+        <div>Lorem   4</div>
+        <div>Lorem   5</div>
+    </div>
+</body>
+</html>

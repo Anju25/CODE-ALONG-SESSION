@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested grid</title>
+    <style>
+        .grid-container{
+            display:grid;
+        /*     grid-template-columns: 1fr 1fr 1fr 1fr; */
+            grid-template-columns: repeat(2,1fr,2fr);
+            grid-gap:1em;
+            grid-auto-rows:minmax(100px,auto);
+        /*     justify-items:stretch;
+            align-items:stretch; */
+        }
+
+        .grid-container>div{
+            padding:1em;
+            background-color: grey;
+        }
+        .grid-container>div:nth-child(even)
+        {
+            background-color: lightgrey;
+        }
+
+        #div1{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            justify-items: center;
+        }
+        #div1 div{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div id="div1">
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+        </div>
+        <div>Lorem   2</div>
+        <div>Lorem   3</div>
+        <div>Lorem   4</div>
+        <div>Lorem   5</div>
+    </div>
+</body>
+</html>

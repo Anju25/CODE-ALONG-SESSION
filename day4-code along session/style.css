@@ -1,0 +1,28 @@
+.box{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    border:solid black;
+    position:absolute;  /* //element is absolute positoned to its first element// */
+    margin:10px;
+}
+.container{
+    display: flex;
+    flex-flow:row wrap; /*flex-wrap is shrot cut for flex directin and flex wrap in this case direction is gona be row and flex wrap is also wrap  */
+    width:100%;
+    height:auto; /* auto means default */
+} 
+
+.myDiv{
+    height:50px;
+    width:50px;
+    border:1px solid black;
+    margin:10px;
+    text-align: center;
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content:center;
+}
